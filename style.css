@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Gabriela';
+    height: 380vh;
+    background: url('./assets/background.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    cursor: default;
+    margin: 0;
+      overflow-y: scroll;
+}
+
+body.loading {
+    cursor: wait;
+  }
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-color: white;
+    user-select: none;
+    background-color: #f0f0f0;
+    box-shadow: 0px 1px 4px rgba(1, 1, 1, 0.3);
+}
+
+.bloco-nome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeLeft 1s ease-out forwards;
+    
+}
+
+.bloco-nome p{
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bloco-nome p.click{
+    margin-top: 20px;
+    animation: scaleVar 0.3s;
+    
+}
+
+.bloco-nome h1:hover{
+    animation: scaleVar 1s ease-in infinite;
+    color: rgb(0, 206, 10);
+    transition: 0.3s
+}
+
+hr{
+    padding: 0px 105px;
+    border: 2px solid rgb(0, 206, 10);
+    border-radius: 50px;
+    margin-top: 5px;
+    
+}
+
+.nav-header{
+    display: flex;
+    gap: 40px;
+    
+}
+
+
+.nav-header a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    animation: fadeRight 1s ease-out forwards;
+}
+
+.nav-header a:hover{
+    transition: 0.3s;
+    transform: translate(-1px, -2px);
+    color: rgb(0, 206, 10);
+    
+}
+
+.container-main{
+    height: 100vh;
+    background-color: transparent;
+    display:flex;
+    justify-content: start;
+}
+
+.inicio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: #f0f0f0;
+    text-shadow: 0px 1px 1px black;
+    font-size: 24px;
+}
+
+.inicio h1{
+    width: 10%;
+    margin-top: -50px;
+    color: rgb(0, 206, 10);
+    animation: fadeLeft 1s ease-out forwards;
+}
+
+.inicio p {
+    word-wrap: break-word;
+    width: 75%;
+    margin-top: 50px;
+    animation: fadeRight 1s ease-out forwards;
+    text-align: center;
+}
+
+.habilidades-border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    width: 60%;
+    margin-left: 20px;
+    border-radius: 20px;
+    height: 70vh;
+    box-shadow: 0px 0px 10px 0px black;
+    animation: rainbow 15s ease-in-out infinite;
+}
+
+.habilidades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    border-radius: 20px;
+    text-align: center;
+}
+
+.title-hab{
+    color: white;
+    margin-top: 40px;
+    
+}
+
+.title-hab:hover{
+    animation: scaleVar 1s ease-in infinite;
+    color: rgb(0, 206, 10);
+    transition: 0.3s;
+}
+
+.hab-images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.hab-images img{
+    width: 25%;
+}
+
+.divisoria{
+
+    
+    margin: 20px;
+}
+
+.hr-hab{
+    width: 90%;
+}
+
+
+.texto-topico{
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    animation: fadeRight 1s ease-out forwards, scaleVar 1s ease-in-out infinite;
+  }
+
+  .texto-whatsapp-icon {
+    position: fixed;
+    bottom: 90px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    animation: fadeRight 1s ease-out forwards, scaleVar 1s ease-in-out infinite;
+    color: rgb(0, 206, 10);
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Para Firefox */
+  html {
+    scrollbar-width: thin; /* Largura fina */
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Cor do thumb e trilha */
+  }
+  
+
+@keyframes scaleVar{
+    0%{
+        transform: scale(1);
+    } 50%{
+        transform: scale(0.9);
+    } 100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    } to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-400px)
+    } 100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeRight {
+    from{
+        opacity: 0;
+        transform: translateX(400px)
+    } to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@media(max-width: 768px){
+    .bloco-nav{
+        display: none;
+    }
+
+    .inicio h1{
+        width: 50%;
+        text-align: center;
+    }
+
+    .inicio p{
+        width: 80%;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .hab-images img{
+        width: 85%;
+    }
+
+    .whatsapp-icon{
+        width: 50px;
+        right: 30px;
+        bottom: 20px;
+    }
+
+    .texto-whatsapp-icon{
+        width: 70px;
+        right: 20px;
+        bottom: 65px;
+    }
+}
